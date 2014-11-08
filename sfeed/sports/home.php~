@@ -1,0 +1,171 @@
+<?php
+require ('core/init.php');
+
+$user 	= $users->teamdata($_SESSION['id']);
+if($_SESSION['id']== 0)
+{
+	header('Location: login.php');
+}
+//$userid = $user['Id'];
+
+
+$username 	= $user['Team'];
+ //$user = $_SESSION['id'];
+
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transiti onal//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>The BasketBall Team of NITT</title>
+
+<link href="css/stylev2.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="functions.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js" type="text/javascript"></script>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css"/>
+
+	<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+	<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+	<script src="js/adminhome.js" type="text/javascript"></script>
+	
+	
+</head>
+<style>
+    body { 
+          background: url(/home/rt/Documents/imageslideshow/images/bgbb.jpg) no-repeat center center fixed; 
+          overflow: hidden;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          max-height: 100%;
+          max-width: 100%;
+}
+
+
+</style>
+<body>	
+	
+
+		<h1> Welcome Admin of <?php echo $username ;?></h1><!-- This is just to display details for a specific team -->
+	<div id="tle">
+	<p id="team">
+		<h1>The Basketball Team</h1>
+	</p>
+</div>
+<div>
+	<ul>
+<li><a href="#">HOME</a>
+</li>
+<li><a href="#">HISTORY</a>
+		
+</li>
+
+<li><a href="#">TEAM</a>
+        <ul>
+        <li><a href="#">First Year</a></li>
+        <li><a href="#">Second Year</a></li>
+        <li><a href="#">Third Year</a></li>
+        <li><a href="#">Fourth Year</a></li>
+        <li><a href="#">Passout</a></li>
+        </ul>
+</li>
+<li><a href="#">MATCHES</a>
+<ul>
+        <li><a href="#">H</a></li>
+        <li><a href="#">I</a></li>
+        <li><a href="#">J</a></li>
+        </ul>
+</li>
+<li><a href="#">CONTACT</a>
+		
+</li>
+<li><a href="#">GALLERY</a>
+		
+</li>
+<li><a href="#" id="admin">ADMIN</a>
+</li>
+</ul>
+</div>
+
+<table id="gallery">
+    <tr>
+        <td>
+            <img src='http://freewallpaperspot.com/wallpapers/basketball-wallpaper-hd-3.jpg' width="75" height="75">
+        </td>
+        <td>
+            <img src="http://wallpaperpanda.com/wallpapers/Gi4/KzE/Gi4KzEbip.jpg" width="75" height="75">
+        </td>
+        <td>
+            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcRwg5Mh0j4tOvA0OzklDCOKxvonpNwHo4tuPQMihp9k3gG5kPZW-g" width="75" height="75">
+        </td>
+        <td>
+            <img src="http://guemblung.biz/wp-content/uploads/2014/07/michael-jordan-dunking-on-people-wallpaper-land-in-nails-photography.jpg" width="75" height="75">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src='http://freewallpaperspot.com/wallpapers/basketball-wallpaper-hd-3.jpg' width="75" height="75">
+        </td>
+        <td>
+            <img src="http://wallpaperpanda.com/wallpapers/Gi4/KzE/Gi4KzEbip.jpg" width="75" height="75">
+        </td>
+        <td>
+            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcRwg5Mh0j4tOvA0OzklDCOKxvonpNwHo4tuPQMihp9k3gG5kPZW-g" width="75" height="75">
+        </td>
+        <td>
+            <img src="http://guemblung.biz/wp-content/uploads/2014/07/michael-jordan-dunking-on-people-wallpaper-land-in-nails-photography.jpg" width="75" height="75">
+        </td>
+    <tr>
+        <td>
+            <img src='http://freewallpaperspot.com/wallpapers/basketball-wallpaper-hd-3.jpg' width="75" height="75">
+        </td>
+        <td>
+            <img src="http://wallpaperpanda.com/wallpapers/Gi4/KzE/Gi4KzEbip.jpg" width="75" height="75">
+        </td>
+        <td>
+            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcRwg5Mh0j4tOvA0OzklDCOKxvonpNwHo4tuPQMihp9k3gG5kPZW-g" width="75" height="75">
+        </td>
+        <td>
+            <img src="http://guemblung.biz/wp-content/uploads/2014/07/michael-jordan-dunking-on-people-wallpaper-land-in-nails-photography.jpg" width="75" height="75">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src='http://freewallpaperspot.com/wallpapers/basketball-wallpaper-hd-3.jpg' width="75" height="75">
+        </td>
+        <td>
+            <img src="http://wallpaperpanda.com/wallpapers/Gi4/KzE/Gi4KzEbip.jpg" width="75" height="75">
+        </td>
+        <td>
+            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcRwg5Mh0j4tOvA0OzklDCOKxvonpNwHo4tuPQMihp9k3gG5kPZW-g" width="75" height="75">
+        </td>
+        <td>
+            <img src="http://guemblung.biz/wp-content/uploads/2014/07/michael-jordan-dunking-on-people-wallpaper-land-in-nails-photography.jpg" width="75" height="75">
+        </td>
+    </tr>
+</table>
+
+<table id ="editng" style="margin-left:1200px; margin-top:50px">
+<tr>
+<td><a href="edit_home.php">Edit</a></td>
+<td><a href="view_edit.php">View</a></td>
+<td><a href="logout.php">Logout</a></td>
+</tr>
+</table>			
+			
+                       
+			 
+
+</body>
+</html>
+	
+		
+	
+

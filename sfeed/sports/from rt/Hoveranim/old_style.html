@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>Demo</title>
+<link rel="stylesheet" href="css/ex.css" type="text/css">
+<style type="text/css">
+/* NOTE: none of the styles are required by the code */
+table.demo {
+    width:450px;
+    background-color:#eee; 
+    border:1px solid #bbb;
+    margin: 1em 0;
+    }
+    
+td {
+    vertical-align:top;
+    }
+td.links {
+    width:25%;
+    }
+table ul {
+    padding:0; margin:0;
+    list-style-type:none;
+    }
+table ul li {
+    margin-bottom:.6em;
+    }
+    
+</style>
+<script type="text/javascript">
+var origContent = "Demo in a table, just for old time's sake. Ha!";
+var msg2 = "Content is held in global variables for this demo, which is not a good idea since that can cause conflicts with other code.";
+var msg3 = 'Just because it works doesn\'t mean it\'s a good idea. These methods have gone out of vogue for good reason. Check out the <a href="demo.html">new code<\/a>.';
+
+function changeContent(id, msg) {
+    var el = document.getElementById(id);
+    if (id) {
+        el.innerHTML = msg;
+    }
+}
+
+</script>
+</head>
+<body>
+
+<h1>Changing Content OnMouseover or OnClick - Old Fashioned Method</h1>
+
+<p>The first two links demonstrate content changing onmouseover.<br>The third link demonstrates that the code works onclick as well.</p>
+
+<table class="demo" border="0" cellpadding="4" cellspacing="0">
+    <tr>
+        <td class="links"><ul>
+            <li><a href="#" onmouseover="changeContent('infoEl', 'New content for the element to display')" 
+      onmouseout="changeContent('infoEl', origContent)">Link 1</a></li>
+            <li><a href="#" onmouseover="changeContent('infoEl', msg2)" 
+      onmouseout="changeContent('infoEl', origContent)">Link 2</a></li>
+            <li><a href="#" onclick="changeContent('infoEl',msg3); return false;">Click here</a></li>
+        </ul></td>
+        <td id="infoEl">Demo in a table, just for old time's sake. Ha!</td>
+    </tr>
+</table>
+
+<p>Back to <a href="index.html">index</a></p>
+
+</body>
+</html>

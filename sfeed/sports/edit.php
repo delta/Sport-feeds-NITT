@@ -1,0 +1,13 @@
+<?php
+
+//include database connection
+
+		require ('core/init.php');
+
+               $admin_id= $_SESSION['id'];
+	if(isset($_GET['id']))
+	{
+		header('location:textedit.php');
+	}
+?>
+
